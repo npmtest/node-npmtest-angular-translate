@@ -1,6 +1,6 @@
 # npmtest-angular-translate
 
-#### basic test coverage for  angular-translate (v2.15.1)  [![npm package](https://img.shields.io/npm/v/npmtest-angular-translate.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-angular-translate) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-angular-translate.svg)](https://travis-ci.org/npmtest/node-npmtest-angular-translate)
+#### basic test coverage for  [angular-translate (v2.15.1)](https://github.com/angular-translate/angular-translate#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-angular-translate.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-angular-translate) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-angular-translate.svg)](https://travis-ci.org/npmtest/node-npmtest-angular-translate)
 
 #### A translation module for AngularJS
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-angular-translate/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-angular-translate/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-angular-translate/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-angular-translate/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-angular-translate/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-angular-translate/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-angular-translate/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-angular-translate/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-angular-translate/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-angular-translate/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-angular-translate/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-angular-translate/build/coverage.html/index.html)
 
@@ -35,47 +35,11 @@
 ```json
 
 {
-    "name": "angular-translate",
-    "version": "2.15.1",
-    "description": "A translation module for AngularJS",
-    "main": "dist/angular-translate.js",
-    "repository": {
-        "type": "git",
-        "url": "http://github.com/angular-translate/angular-translate"
-    },
-    "keywords": [
-        "angular-translate",
-        "angular",
-        "AngularJS",
-        "translation"
-    ],
-    "engines": {
-        "node": "*"
-    },
-    "devEngines": {
-        "node": ">=6.9",
-        "npm": ">=3"
-    },
-    "scripts": {
-        "prepublish": "bower install",
-        "check-env": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
-        "shipit": "npm run-script -s check-env && bower install && bower update && grunt prepare-release",
-        "lint": "grunt lint",
-        "test": "npm run-script -s check-env && grunt install-test && grunt test",
-        "test-headless": "npm run-script -s check-env && grunt test-headless",
-        "test-scopes": "npm run-script -s check-env && grunt install-test && for f in test_scopes/*; do TEST_SCOPE=\"'basename $f'\" grunt test; done",
-        "clean-test-scopes": "for f in test_scopes/*; do (cd $f; rm -rf bower_components); done",
-        "compile": "npm run-script -s check-env && grunt compile",
-        "build": "npm run-script -s check-env && grunt build",
-        "build-site": "npm run -s build-site-all-languages; npm run -s build-site-plato-report",
-        "build-site-all-languages": "./build_tools/generate_site.sh",
-        "build-site-by-language": "./build_tools/generate_site_by_language.sh",
-        "build-site-plato-report": "rm -rf ./site/plato && plato -d plato -l .jshintrc src/*.js src/**/*.js && mv plato site",
-        "upload-github-release": "node build_tools/upload-github-release.js",
-        "start-demo": "node build_tools/server.js"
-    },
     "author": {
         "name": "Pascal Precht"
+    },
+    "bugs": {
+        "url": "https://github.com/angular-translate/angular-translate/issues"
     },
     "contributors": [
         {
@@ -89,7 +53,10 @@
             "name": "Thorsten S"
         }
     ],
-    "license": "MIT",
+    "dependencies": {
+        "angular": ">=1.2.26 <=1.6"
+    },
+    "description": "A translation module for AngularJS",
     "devDependencies": {
         "adm-zip": "^0.4.7",
         "body-parser": "^1.16.0",
@@ -136,9 +103,59 @@
         "serve-favicon": "^2.3.2",
         "tar.gz": "^1.0.5"
     },
-    "dependencies": {
-        "angular": ">=1.2.26 <=1.6"
-    }
+    "devEngines": {
+        "node": ">=6.9",
+        "npm": ">=3"
+    },
+    "directories": {},
+    "dist": {
+        "shasum": "920f7d2b877819e1c0fa881781b9b675f36480ce",
+        "tarball": "https://registry.npmjs.org/angular-translate/-/angular-translate-2.15.1.tgz"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "gitHead": "cc6d122e6f34e15806d30eef6b7886172e3a31e7",
+    "homepage": "https://github.com/angular-translate/angular-translate#readme",
+    "keywords": [
+        "angular-translate",
+        "angular",
+        "AngularJS",
+        "translation"
+    ],
+    "license": "MIT",
+    "main": "dist/angular-translate.js",
+    "maintainers": [
+        {
+            "name": "knalli"
+        }
+    ],
+    "name": "angular-translate",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/angular-translate/angular-translate.git"
+    },
+    "scripts": {
+        "build": "npm run-script -s check-env && grunt build",
+        "build-site": "npm run -s build-site-all-languages; npm run -s build-site-plato-report",
+        "build-site-all-languages": "./build_tools/generate_site.sh",
+        "build-site-by-language": "./build_tools/generate_site_by_language.sh",
+        "build-site-plato-report": "rm -rf ./site/plato && plato -d plato -l .jshintrc src/*.js src/**/*.js && mv plato site",
+        "check-env": "node node_modules/fbjs-scripts/node/check-dev-engines.js package.json",
+        "clean-test-scopes": "for f in test_scopes/*; do (cd $f; rm -rf bower_components); done",
+        "compile": "npm run-script -s check-env && grunt compile",
+        "lint": "grunt lint",
+        "prepublish": "bower install",
+        "shipit": "npm run-script -s check-env && bower install && bower update && grunt prepare-release",
+        "start-demo": "node build_tools/server.js",
+        "test": "npm run-script -s check-env && grunt install-test && grunt test",
+        "test-headless": "npm run-script -s check-env && grunt test-headless",
+        "test-scopes": "npm run-script -s check-env && grunt install-test && for f in test_scopes/*; do TEST_SCOPE=\"'basename $f'\" grunt test; done",
+        "upload-github-release": "node build_tools/upload-github-release.js"
+    },
+    "version": "2.15.1",
+    "bin": {}
 }
 ```
 

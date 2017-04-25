@@ -1,6 +1,6 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
-    "description": "#### basic test coverage for  angular-translate (v2.15.1)  [![npm package](https://img.shields.io/npm/v/npmtest-angular-translate.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-angular-translate) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-angular-translate.svg)](https://travis-ci.org/npmtest/node-npmtest-angular-translate)",
+    "description": "#### basic test coverage for  [angular-translate (v2.15.1)](https://github.com/angular-translate/angular-translate#readme)  [![npm package](https://img.shields.io/npm/v/npmtest-angular-translate.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-angular-translate) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-angular-translate.svg)](https://travis-ci.org/npmtest/node-npmtest-angular-translate)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "utility2": "kaizhu256/node-utility2#alpha"
